@@ -11,5 +11,7 @@ Avaliar a experiência do usuário e o comportamento do sistema através de test
 Foram utilizadas técnicas de teste exploratório com charters estruturados, aplicando as seguintes heurísticas:
 
 🔄 CRUD – criação, leitura, atualização e remoção
+
 📏 Vazio / Cheio / Limite – testes em extremos
+
 🔁 Fluxo interrompido – navegação, refresh e troca de contexto
