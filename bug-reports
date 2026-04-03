@@ -1,1 +1,65 @@
+# 🐞 Bug Report: Validação incorreta do campo "Contacto" no cadastro de cliente
 
+## 📌 Descrição
+O sistema de cadastro de cliente no site da Radio Popular permite inserir números de telefone inválidos no campo "Contacto", aceitando sequências de dígitos repetidos sem qualquer validação de formato, comprimento mínimo ou máximo.
+
+---
+
+## 🌐 Ambiente
+- **Browser:** Chrome 146.0.7680.165 (64 bits)
+- **Sistema Operacional:** Windows 10 Home Single Language (versão 22H2)
+- **Dispositivo:** Desktop
+- **URL:** https://www.radiopopular.pt/
+- **Estado da conta:** Novo cadastro
+
+---
+
+## 🔁 Passos para Reproduzir
+
+1. Aceder ao site https://www.radiopopular.pt/  
+2. No canto superior direito, clicar no ícone de utilizador (ao lado do carrinho)  
+3. Selecionar a opção **"Criar uma conta"**  
+4. Preencher os campos obrigatórios (nome, e-mail, telemóvel e palavra-passe)  
+5. Confirmar o registo através do link enviado por e-mail  
+6. Validar o código SMS recebido no telemóvel  
+7. Aceder à área de cliente  
+8. No menu lateral, clicar em **"Moradas"**  
+9. Inserir um número inválido no campo **"Contacto"** (ex: `111111111111111111`)  
+
+---
+
+## ❌ Resultado Obtido
+O sistema aceita o número de contacto inválido sem apresentar qualquer mensagem de erro ou validação.
+
+---
+
+## ✅ Resultado Esperado
+O sistema deve validar o campo "Contacto" e rejeitar entradas inválidas, exibindo uma mensagem de erro clara ao utilizador.  
+Regras esperadas incluem:
+- Comprimento mínimo e máximo definido  
+- Apenas números válidos  
+- Possível validação de formato (ex: padrão nacional)  
+
+---
+
+## ⚠️ Severidade
+**A definir (TBD)**  
+Sugestão: Média — impacta a qualidade dos dados e pode afetar comunicações com o cliente.
+
+---
+
+## ⏱️ Prioridade
+**Média (P2)**  
+A falha não impede o registo do cliente, mas compromete a integridade dos dados.
+
+---
+
+## 📎 Evidência
+- `print-bug-radio-popular-tel.pdf`
+
+---
+
+## 💡 Observações Adicionais
+A ausência de validação pode levar ao armazenamento de dados incorretos, impactando processos dependentes de contacto telefónico (ex: entregas, suporte ao cliente).
+
+---
